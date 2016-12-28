@@ -2,27 +2,28 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by Administrator on 2016/12/28.
+ *
+ * 1. Two Sum Add to List QuestionEditorial Solution My Submissions
+ * Total Accepted: 382115
+ * Total Submissions: 1292842
+ * Difficulty: Easy
+ * Contributors: Admin
+ * Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+ *
+ * You may assume that each input would have exactly one solution.
+ *
+ * Example:
+ * Given nums = [2, 7, 11, 15], target = 9,
+ *
+ * Because nums[0] + nums[1] = 2 + 7 = 9,
+ * return [0, 1].
+ *
+ * 
  */
-public class Solution{
+public class TwoSum {
 
     /**
-     *
-     * 1. Two Sum Add to List QuestionEditorial Solution My Submissions
-     * Total Accepted: 382115
-     * Total Submissions: 1292842
-     * Difficulty: Easy
-     * Contributors: Admin
-     * Given an array of integers, return indices of the two numbers such that they add up to a specific target.
-     * 
-     * You may assume that each input would have exactly one solution.
-     * 
-     * Example:
-     * Given nums = [2, 7, 11, 15], target = 9,
-     * 
-     * Because nums[0] + nums[1] = 2 + 7 = 9,
-     * return [0, 1].
-     * 
+     *MySolution 嵌套循环
      * @param nums
      * @param target
      * @return
@@ -41,7 +42,7 @@ public class Solution{
     }
 
     /**
-     *
+     *BestSolution 创建一个Map<nums[i], i>,利用map.containsKey(target - nums[i])进行判断
      * 
      * @param nums
      * @param target
@@ -50,13 +51,13 @@ public class Solution{
     public int[] twoSum2(int[] nums,int target){
         int[] result = new int[2];
         Map<Integer, Integer> map = new HashMap<Integer, Integer>();
-        for (int i = 0; i < nums.length; i++) {
-            if (map.containsKey(target - nums[i])) {
-                result[1] = i ;
+        for (int i = 0; i < nums.length; i++){
+            if (map.containsKey(target - nums[i])){
+                result[1] = i;
                 result[0] = map.get(target - nums[i]);
                 return result;
             }
-            map.put(nums[i], i );
+            map.put(nums[i], i);
         }
         return result;
     }
