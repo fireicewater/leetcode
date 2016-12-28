@@ -1,3 +1,5 @@
+package Solution;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,7 +25,7 @@ import java.util.Map;
 public class TwoSum {
 
     /**
-     *MySolution 嵌套循环
+     *MySolution 嵌套循环  40Ms
      * @param nums
      * @param target
      * @return
@@ -42,7 +44,8 @@ public class TwoSum {
     }
 
     /**
-     *BestSolution 创建一个Map<nums[i], i>,利用map.containsKey(target - nums[i])进行判断
+     *BestSolution   8ms
+     * 创建一个Map<nums[i], i>,利用map.containsKey(target - nums[i])进行判断
      * 
      * @param nums
      * @param target
