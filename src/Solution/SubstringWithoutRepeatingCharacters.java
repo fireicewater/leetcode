@@ -15,7 +15,7 @@ package Solution;
 public class SubstringWithoutRepeatingCharacters{
 
     public int lengthOfLongestSubstring(String s){
-        System.out.println("test");
+        System.out.println("test1234");
         return 0;
     }
 }
