@@ -13,7 +13,7 @@ public class Radom4 {
 
     public static void GetCode() {
         Random random = new Random();
-        for (int i = 0; i < 90; i++) {
+        for (int i = 0; i < 95; i++) {
             String fourRandom = random.nextInt(10000) + "";
             int randLength = fourRandom.length();
             if(randLength<4){
